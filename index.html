@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>New Round Up Starter — Listening</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>New Round Up Starter</h1>
+    <p class="subtitle">Student's Book — Audio CD · 50 tracks</p>
+  </header>
+
+  <!-- Track list -->
+  <main class="track-list" id="trackList" aria-label="Track list"></main>
+
+  <!-- Sticky player -->
+  <footer class="player" id="player" aria-label="Player">
+    <div class="now-playing">
+      <span class="np-title" id="npTitle">Chọn một track để bắt đầu</span>
+      <span class="np-time"><span id="curTime">0:00</span> / <span id="durTime">0:00</span></span>
+    </div>
+
+    <!-- Seek bar with A-B markers -->
+    <div class="seek-wrap">
+      <div class="ab-marker" id="markA" hidden></div>
+      <div class="ab-marker ab-marker--b" id="markB" hidden></div>
+      <input type="range" id="seek" min="0" max="1000" value="0" step="1" aria-label="Tua bài" />
+    </div>
+
+    <!-- Transport controls -->
+    <div class="controls">
+      <button class="btn" id="prevBtn" aria-label="Bài trước">⏮</button>
+      <button class="btn btn--play" id="playBtn" aria-label="Phát / Tạm dừng">▶</button>
+      <button class="btn" id="nextBtn" aria-label="Bài sau">⏭</button>
+      <button class="btn btn--toggle" id="repeatBtn" aria-label="Lặp cả bài" title="Lặp cả bài">🔁</button>
+      <div class="speed">
+        <button class="btn btn--speed" id="speedBtn" aria-label="Tốc độ phát">1×</button>
+      </div>
+    </div>
+
+    <!-- A-B repeat controls -->
+    <div class="ab-bar">
+      <span class="ab-label">A-B Repeat</span>
+      <button class="btn btn--ab" id="setA">A: --:--</button>
+      <button class="btn btn--ab" id="setB">B: --:--</button>
+      <button class="btn btn--toggle" id="abToggle" aria-label="Bật/tắt lặp A-B" disabled>Lặp: tắt</button>
+      <button class="btn btn--clear" id="abClear" aria-label="Xoá A-B" disabled>✕</button>
+    </div>
+  </footer>
+
+  <audio id="audio" preload="metadata"></audio>
+  <script src="js/app.js"></script>
+</body>
+</html>
