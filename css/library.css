@@ -1,0 +1,87 @@
+:root {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --surface-2: #334155;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+html, body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, "SF Pro Text", "Segoe UI", Roboto, system-ui, sans-serif;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.lib-header {
+  padding: max(env(safe-area-inset-top), 24px) 20px 8px;
+  text-align: center;
+}
+.lib-header h1 { margin: 0; font-size: 1.6rem; font-weight: 800; }
+.subtitle { margin: 6px 0 0; color: var(--muted); font-size: 0.95rem; }
+
+.book-grid {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 20px 16px 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--surface-2);
+  transition: transform 0.1s, border-color 0.15s;
+}
+.book-card:active { transform: scale(0.97); }
+.book-card:hover { border-color: var(--book-color); }
+
+.book-cover {
+  aspect-ratio: 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  text-align: center;
+  background:
+    radial-gradient(120% 120% at 0% 0%, color-mix(in srgb, var(--book-color) 55%, transparent), transparent 60%),
+    linear-gradient(135deg, var(--book-color), color-mix(in srgb, var(--book-color) 40%, #0b1220));
+}
+.book-cover-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+  line-height: 1.2;
+}
+
+.book-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 12px 14px 14px;
+}
+.book-title { font-weight: 700; font-size: 1rem; }
+.book-sub { color: var(--muted); font-size: 0.8rem; }
+.book-tracks { color: var(--accent); font-size: 0.78rem; font-weight: 600; margin-top: 2px; }
+
+.lib-footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.78rem;
+  padding: 16px 20px calc(20px + env(safe-area-inset-bottom));
+}
+.lib-error { text-align: center; color: #f87171; padding: 40px; }

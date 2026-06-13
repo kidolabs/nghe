@@ -1,11 +1,10 @@
 {
-  "name": "New Round Up Starter — Listening",
-  "short_name": "NRU Listening",
-  "description": "Audio CD player với A-B repeat cho học tiếng Anh",
+  "name": "Thư viện nghe — Listening Library",
+  "short_name": "Nghe",
+  "description": "Thư viện audio học tiếng Anh — nhiều sách, player với tốc độ + lặp",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",
-  "orientation": "portrait",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
   "icons": [

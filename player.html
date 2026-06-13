@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Listening</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="css/player.css" />
+</head>
+<body>
+  <header class="app-header">
+    <a class="back-link" href="index.html" aria-label="Về thư viện">‹ Thư viện</a>
+    <div class="header-titles">
+      <h1 id="bookTitle">Listening</h1>
+      <p class="subtitle" id="bookSub"></p>
+    </div>
+  </header>
+
+  <main class="track-list" id="trackList" aria-label="Track list"></main>
+
+  <footer class="player" id="player" aria-label="Player">
+    <div class="now-playing">
+      <span class="np-title" id="npTitle">Chọn một track để bắt đầu</span>
+      <span class="np-time"><span id="curTime">0:00</span> / <span id="durTime">0:00</span></span>
+    </div>
+
+    <div class="seek-wrap">
+      <input type="range" id="seek" min="0" max="1000" value="0" step="1" aria-label="Tua bài" />
+    </div>
+
+    <div class="controls">
+      <button class="btn" id="prevBtn" aria-label="Bài trước">⏮</button>
+      <button class="btn btn--play" id="playBtn" aria-label="Phát / Tạm dừng">▶</button>
+      <button class="btn" id="nextBtn" aria-label="Bài sau">⏭</button>
+      <button class="btn btn--toggle" id="repeatBtn" aria-label="Lặp cả bài" title="Lặp cả bài">🔁</button>
+      <div class="speed">
+        <button class="btn btn--speed" id="speedBtn" aria-label="Tốc độ phát">1×</button>
+      </div>
+    </div>
+
+    <div class="vol-bar">
+      <span class="vol-ico" aria-hidden="true">🔉</span>
+      <input type="range" id="vol" min="0" max="100" value="100" step="1" aria-label="Âm lượng" />
+      <span class="vol-val" id="volVal">100%</span>
+    </div>
+  </footer>
+
+  <audio id="audio" preload="metadata"></audio>
+  <script src="js/player.js"></script>
+</body>
+</html>

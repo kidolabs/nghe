@@ -1,0 +1,6 @@
+[
+  { "slug": "new-round-up-starter", "title": "New Round Up Starter", "subtitle": "Student's Book — Audio CD", "tracks": 50, "color": "#38bdf8" },
+  { "slug": "round-up-1", "title": "Round Up 1", "subtitle": "Audio CD", "tracks": 50, "color": "#22c55e" },
+  { "slug": "round-up-2", "title": "Round Up 2", "subtitle": "Audio CD", "tracks": 50, "color": "#f59e0b" },
+  { "slug": "round-up-3", "title": "Round Up 3", "subtitle": "Audio CD", "tracks": 50, "color": "#a78bfa" }
+]
