@@ -2,5 +2,8 @@
   { "slug": "new-round-up-starter", "title": "New Round Up Starter", "subtitle": "Student's Book — Audio CD", "tracks": 50, "color": "#38bdf8" },
   { "slug": "round-up-1", "title": "Round Up 1", "subtitle": "Audio CD", "tracks": 50, "color": "#22c55e" },
   { "slug": "round-up-2", "title": "Round Up 2", "subtitle": "Audio CD", "tracks": 50, "color": "#f59e0b" },
-  { "slug": "round-up-3", "title": "Round Up 3", "subtitle": "Audio CD", "tracks": 50, "color": "#a78bfa" }
+  { "slug": "round-up-3", "title": "Round Up 3", "subtitle": "Audio CD", "tracks": 50, "color": "#a78bfa" },
+  { "slug": "round-up-4", "title": "Round Up 4", "subtitle": "Audio CD", "tracks": 38, "color": "#f472b6" },
+  { "slug": "round-up-5", "title": "Round Up 5", "subtitle": "Audio CD", "tracks": 39, "color": "#2dd4bf" },
+  { "slug": "round-up-6", "title": "Round Up 6", "subtitle": "Audio CD", "tracks": 40, "color": "#fb7185" }
 ]
