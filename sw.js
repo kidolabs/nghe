@@ -1,6 +1,6 @@
 // Offline-first service worker. App shell is precached; audio is cached
 // lazily on first play (cache-first) so the app works offline after listening.
-const SHELL = 'nru-shell-v2';
+const SHELL = 'nru-shell-v3';
 const MEDIA = 'nru-media-v1';
 const SHELL_ASSETS = [
   '.',
@@ -39,8 +39,17 @@ self.addEventListener('fetch', (e) => {
     return;
   }
 
-  // Shell: cache-first, fall back to network
-  e.respondWith(caches.match(req).then((hit) => hit || fetch(req)));
+  // Shell: network-first so updates show immediately when online; fall back
+  // to cache offline. Keeps the app current without a stale-cache reload lag.
+  e.respondWith(
+    fetch(req).then((res) => {
+      if (res && res.ok && res.status === 200) {
+        const copy = res.clone();
+        caches.open(SHELL).then((c) => c.put(req, copy));
+      }
+      return res;
+    }).catch(() => caches.match(req))
+  );
 });
 
 // Fetch (once) + cache the full audio file, then answer Range requests with 206.
