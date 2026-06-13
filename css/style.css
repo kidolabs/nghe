@@ -130,18 +130,6 @@ body {
   background: var(--accent);
   border: 3px solid #fff;
 }
-.ab-marker {
-  position: absolute;
-  top: 8px;
-  width: 4px;
-  height: 26px;
-  background: var(--a);
-  border-radius: 2px;
-  pointer-events: none;
-  transform: translateX(-2px);
-}
-.ab-marker--b { background: var(--b); }
-
 /* ---------- Controls ---------- */
 .controls {
   display: flex;
@@ -176,27 +164,36 @@ body {
 .speed { display: flex; }
 .btn--speed { width: auto !important; min-width: 56px; font-size: 1.05rem; font-weight: 700; padding: 0 12px; }
 
-/* ---------- A-B bar ---------- */
-.ab-bar {
+/* ---------- Volume bar ---------- */
+.vol-bar {
   display: flex;
   align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  padding-top: 4px;
+  gap: 12px;
+  padding-top: 8px;
   border-top: 1px dashed var(--surface-2);
 }
-.ab-label { font-size: 0.8rem; color: var(--muted); font-weight: 600; margin-right: 2px; }
-.btn--ab {
-  min-height: 44px;
-  padding: 0 14px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  font-variant-numeric: tabular-nums;
+.vol-ico { font-size: 1.2rem; }
+.vol-val { font-size: 0.85rem; color: var(--muted); font-variant-numeric: tabular-nums; min-width: 42px; text-align: right; }
+#vol {
+  flex: 1;
+  height: 30px;
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
 }
-.btn--ab.set-a { background: var(--a); color: #1a1206; }
-.btn--ab.set-b { background: var(--b); color: #2a0606; }
-.ab-bar .btn--toggle { min-height: 44px; padding: 0 14px; font-size: 0.9rem; font-weight: 600; }
-.btn--clear { min-height: 44px; width: 44px; font-size: 1.1rem; margin-left: auto; }
+#vol::-webkit-slider-runnable-track { height: 8px; border-radius: 999px; background: var(--surface-2); }
+#vol::-moz-range-track { height: 8px; border-radius: 999px; background: var(--surface-2); }
+#vol::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px; height: 24px; margin-top: -8px;
+  border-radius: 50%; background: var(--accent-2); border: 3px solid #fff;
+}
+#vol::-moz-range-thumb {
+  width: 24px; height: 24px;
+  border-radius: 50%; background: var(--accent-2); border: 3px solid #fff;
+}
 
 /* ---------- Desktop / wide ---------- */
 @media (min-width: 720px) {

@@ -1,6 +1,6 @@
 // Offline-first service worker. App shell is precached; audio is cached
 // lazily on first play (cache-first) so the app works offline after listening.
-const SHELL = 'nru-shell-v1';
+const SHELL = 'nru-shell-v2';
 const MEDIA = 'nru-media-v1';
 const SHELL_ASSETS = [
   '.',

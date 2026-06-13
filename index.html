@@ -27,10 +27,8 @@
       <span class="np-time"><span id="curTime">0:00</span> / <span id="durTime">0:00</span></span>
     </div>
 
-    <!-- Seek bar with A-B markers -->
+    <!-- Seek bar -->
     <div class="seek-wrap">
-      <div class="ab-marker" id="markA" hidden></div>
-      <div class="ab-marker ab-marker--b" id="markB" hidden></div>
       <input type="range" id="seek" min="0" max="1000" value="0" step="1" aria-label="Tua bài" />
     </div>
 
@@ -45,13 +43,11 @@
       </div>
     </div>
 
-    <!-- A-B repeat controls -->
-    <div class="ab-bar">
-      <span class="ab-label">A-B Repeat</span>
-      <button class="btn btn--ab" id="setA">A: --:--</button>
-      <button class="btn btn--ab" id="setB">B: --:--</button>
-      <button class="btn btn--toggle" id="abToggle" aria-label="Bật/tắt lặp A-B" disabled>Lặp: tắt</button>
-      <button class="btn btn--clear" id="abClear" aria-label="Xoá A-B" disabled>✕</button>
+    <!-- Volume (lưu ý: iOS Safari bỏ qua, chỉ dùng được trên Mac/desktop) -->
+    <div class="vol-bar">
+      <span class="vol-ico" aria-hidden="true">🔉</span>
+      <input type="range" id="vol" min="0" max="100" value="100" step="1" aria-label="Âm lượng" />
+      <span class="vol-val" id="volVal">100%</span>
     </div>
   </footer>
 
